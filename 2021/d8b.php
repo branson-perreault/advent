@@ -18,6 +18,7 @@ function getSignals($patterns) {
     foreach([0, 1, 2] as $i) {
         if (count(array_diff(str_split($patterns[$i]), $signals[7])) == 2) {
             $signals[3] = str_split($patterns[$i]);
+
             array_splice($patterns, $i, 1);
             break;
         }
